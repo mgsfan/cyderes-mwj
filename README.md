@@ -1,4 +1,8 @@
 # Michael Javier - Logstash Exercise README 
+## TLDR 
+
+Please see the [stdout.txt](stdout.txt) for examples of the filter logstash output after filtering, and the query results of my Elasticsearch instance where Logstash was saving documents after it finished filtering logs.
+
 
 ## Input Section
 ``` 

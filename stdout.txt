@@ -1,3 +1,5 @@
+####### Logstash stdout after filtering new row added to injest.log
+
 [2022-09-02T21:50:16,118][INFO ][logstash.outputs.file    ][main][4a895b9532b56866e3acf5a7b745b0401331d54aa188d79dfa1344152cc82946] Opening file {:path=>"C:/DevTools/LogStash/logstash-8.4.0/data/cyderes-mwj/output.txt"}
 {
     "description" => "Virus Found",
