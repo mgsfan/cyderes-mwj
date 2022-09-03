@@ -1,0 +1,56 @@
+[2022-09-02T21:50:16,118][INFO ][logstash.outputs.file    ][main][4a895b9532b56866e3acf5a7b745b0401331d54aa188d79dfa1344152cc82946] Opening file {:path=>"C:/DevTools/LogStash/logstash-8.4.0/data/cyderes-mwj/output.txt"}
+{
+    "description" => "Virus Found",
+           "host" => {
+        "name" => "Yukino"
+    },
+     "@timestamp" => 2022-09-03T02:50:28.052660700Z,
+            "log" => {
+        "file" => {
+            "path" => "C:/DevTools/LogStash/logstash-8.4.0/data/cyderes-mwj/ingest.log"
+        }
+    },
+       "severity" => "11",
+        "message" => "<14>1 2016-12-25T09:03:52.754646-06:00 contosohost1 antivirus 2496 - - alertname=\"Virus Found\" computername=\"contosopc42\" computerip=\"216.58.194.142\" severity=\"11\"\r",
+       "hostname" => "contosopc42",
+      "source_ip" => "216.58.194.142",
+          "event" => {
+        "original" => "<14>1 2016-12-25T09:03:52.754646-06:00 contosohost1 antivirus 2496 - - alertname=\"Virus Found\" computername=\"contosopc42\" computerip=\"216.58.194.142\" severity=\"11\"\r"
+    },
+       "@version" => "1"
+}
+{
+    "description" => "Virus Found",
+           "host" => {
+        "name" => "Yukino"
+    },
+     "@timestamp" => 2022-09-03T02:50:42.077616700Z,
+            "log" => {
+        "file" => {
+            "path" => "C:/DevTools/LogStash/logstash-8.4.0/data/cyderes-mwj/ingest.log"
+        }
+    },
+       "severity" => "High",
+        "message" => "<14>1 2016-12-25T09:03:52.754646-06:00 contosohost1 antivirus 2496 - - alertname=\"Virus Found\" computername=\"contosopc42\" computerip=\"216.58.194.142\" severity=\"1\"\r",
+       "hostname" => "contosopc42",
+      "source_ip" => "216.58.194.142",
+          "event" => {
+        "original" => "<14>1 2016-12-25T09:03:52.754646-06:00 contosohost1 antivirus 2496 - - alertname=\"Virus Found\" computername=\"contosopc42\" computerip=\"216.58.194.142\" severity=\"1\"\r"
+    },
+       "@version" => "1"
+}
+
+-----------------------------------------------------------------------------
+##### Elasticsearch query to find the number of documents that I created while testing.
+
+mjavier@Yukino MINGW64 /c/DevTools/LogStash/logstash-8.4.0/data/cyderes-mwj (main)
+$ curl -X GET "localhost:9200/.ds-logs-generic-default-2022.08.29-000001/_count?pretty"
+{
+  "count" : 258,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  }
+}
